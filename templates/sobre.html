@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Sobre o Projeto</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo RI">
+      <h1>Reciclagem Inteligente</h1>
+    </div>
+    <nav>
+      <a href="{{ url_for('index') }}">Início</a>
+      <a href="{{ url_for('sobre') }}">Sobre o Projeto</a>
+      <a href="{{ url_for('ranking') }}">Ranking</a>
+      <a href="{{ url_for('login') }}">Login</a>
+    </nav>
+  </header>
+  <main class="about">
+    <section class="section">
+      <h2>🎯Objetivo Geral</h2>
+      <p>Apresentar uma solução de reciclagem inteligente e prática no cotidiano urbano, promovendo o descarte correto de resíduos recicláveis, com recompensas para os usuários e benefícios para a instituição.</p>
+    </section>
+    <section class="section">
+      <h2>🤝Solução Proposta</h2>
+      <p>Implementação de lixeiras automatizadas que reconhecem o estudante e o tipo de resíduo, gerando recompensas.</p>
+    </section>
+    <section class="section">
+      <h2>♻️Objetivos Específicos</h2>
+      <ul>
+        <li>Instalar lixeiras inteligentes.</li>
+        <li>Fazer a gestão eficiente dos resíduos.</li>
+        <li>Criar sistema de recompensas para incentivar o descarte correto.</li>
+        <li>Reutilizar resíduos coletados para fabricar mesas sustentáveis.</li>
+        <li>Estabelecer parcerias com empresas de reciclagem.</li>
+      </ul>
+    </section>
+    <section class="section">
+      <h2>🛠 Metodologia</h2>
+      <p> O projeto teve início com visitas técnicas ao campus Estácio Floresta para mapear os locais ideais para instalação das lixeiras inteligentes. 
+        As lixeiras, conectadas a um sistema automatizado, coletam informações de quem descarta e do tipo de resíduo, gerando pontos por QR Code que são revertidos em créditos para os estudantes.</p>
+    </section>
+    <section>
+      <h2>Quem somos?</h2>
+    </section>
+    <div class="back-button">
+      <a href="{{ url_for('index') }}" class="btn">Voltar ao Início</a>
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2025 - Projeto Estácio Floresta</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <section>
+    <h2>Ranking de Pontos</h2>
+
+    {% if ranking_list %}
+      <table>
+        <thead>
+          <tr>
+            <th>Posição</th>
+            <th>Matrícula</th>
+            <th>Pontos</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for i, aluno in enumerate(ranking_list, 1) %}
+          <tr>
+            <td>{{ i }}</td>
+            <td>{{ aluno.matricula }}</td>
+            <td>{{ aluno.pontos }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    {% else %}
+      <p>Nenhum aluno encontrado no ranking.</p>
+    {% endif %}
+  </section>
+{% endblock %}

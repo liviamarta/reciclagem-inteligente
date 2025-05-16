@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Área do Estudante</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo RI">
+      <h1>Reciclagem Inteligente</h1>
+    </div>
+    <nav>
+      <a href="{{ url_for('index') }}">Início</a>
+      <a href="{{ url_for('sobre') }}">Sobre o Projeto</a>
+      <a href="{{ url_for('ranking') }}">Ranking</a>
+      <a href="{{ url_for('login') }}">Login</a>
+    </nav>
+  </header>
+  <main>
+    <h2>Bem-vindo(a), {{ matricula }}!</h2>
+    <p>Você tem atualmente <strong>{{ pontos }}</strong> pontos!</p>
+    <p>Escolha a lixeira para descarte:</p>
+    <button onclick="mostrarQRCode()">Lixeira Plástico</button>
+    <button onclick="mostrarQRCode()">Lixeira Papel</button>
+    <button onclick="mostrarQRCode()">Lixeira Metais</button>
+
+    <div id="qrcode" style="margin-top: 20px; display: none;">
+      <p>Escaneie este QR Code para abrir a lixeira:</p>
+      <img src="https://api.qrserver.com/v1/create-qr-code/?data=Descarte&size=150x150" alt="QR Code">
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 - Projeto Estácio Floresta</p>
+  </footer>
+
+  <script>
+    function mostrarQRCode() {
+      document.getElementById('qrcode').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
