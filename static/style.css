@@ -1,11 +1,166 @@
-/* ... (seu CSS base continua igual acima) ... */
+/* Estilo base - permanece igual */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #eef2f3;
+  color: #333;
+}
+
+header {
+  background-color: #00695c;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #a5d6a7;
+}
+
+main {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #00796b;
+  margin-bottom: 10px;
+}
+
+.section {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.section h2 {
+  color: #2e7d32;
+  margin-bottom: 15px;
+}
+
+.section p, .section ul {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.section ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+input, button {
+  padding: 10px;
+  margin: 10px 0;
+  width: 100%;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #00897b;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #004d40;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 20px;
+  background-color: #43a047;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background-color: #1b5e20;
+}
+
+.hero-img img {
+  width: 100%;
+  height: auto;
+  max-height: 800px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-top: 23px;
+  margin-bottom: 30px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.about {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.back-button {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.login-section {
+  max-width: 500px;
+  margin: auto;
+}
+
+.button-group button {
+  margin: 10px;
+}
+
+.qrcode-container img {
+  margin-top: 10px;
+}
+
+footer {
+  background-color: #00695c;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.logo-container img {
+  height: 50px;
+}
 
 /* RESPONSIVIDADE */
 @media (max-width: 768px) {
   nav a {
     display: block;
     margin: 10px 0;
-    font-size: 1.1rem;
   }
 
   main {
@@ -17,12 +172,12 @@
   }
 
   h2, .section h2 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     text-align: center;
   }
 
   .section p, .section ul {
-    font-size: 1.05rem;
+    font-size: 0.95rem;
   }
 
   .logo-container {
@@ -36,27 +191,17 @@
 
   footer {
     padding: 15px;
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    width: 100%;
+    padding: 12px 0;
     font-size: 1rem;
   }
 
-  .btn, button {
-    width: 100%;
-    padding: 14px 0;
-    font-size: 1.1rem;
-  }
-
-  input {
-    font-size: 1.1rem;
-    padding: 14px;
-  }
-
-  form {
-    padding: 10px;
-  }
-
-  .login-section {
-    max-width: 100%;
-    padding: 0 10px;
+  input, button {
+    font-size: 1rem;
   }
 }
 
@@ -78,20 +223,10 @@
   }
 
   h2, .section h2 {
-    font-size: 1.6rem;
+    font-size: 1.3rem;
   }
 
-  .section p, .section ul {
-    font-size: 1.05rem;
-  }
-
-  .btn, button {
-    font-size: 1.1rem;
-    padding: 16px 0;
-  }
-
-  input {
-    font-size: 1.1rem;
-    padding: 16px;
+  .btn {
+    font-size: 0.95rem;
   }
 }
