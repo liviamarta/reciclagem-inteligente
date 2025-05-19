@@ -1,24 +1,18 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <title>Reciclagem Inteligente</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-</head>
 <body>
-  <header>
+  <aside class="sidebar">
     <div class="logo-container">
       <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo RI">
       <h1>Reciclagem Inteligente</h1>
     </div>
     <nav>
-      <a href="{{ url_for('index') }}">Início</a>
+      <a href="{{ url_for('index') }}" class="active">Início</a>
       <a href="{{ url_for('sobre') }}">Sobre o Projeto</a>
       <a href="{{ url_for('ranking') }}">Ranking</a>
       <a href="{{ url_for('login') }}">Login</a>
     </nav>
-  </header>
+  </aside>
   <main>
+    <!-- Conteúdo principal aqui -->
     <section class="intro">
       <h2>Transformando resíduos em soluções para o futuro</h2>
       <p>Participe da reciclagem inteligente e ganhe recompensas enquanto contribui para um futuro sustentável!</p>
@@ -32,4 +26,3 @@
     <p>&copy; 2025 - Projeto Estácio Floresta</p>
   </footer>
 </body>
-</html>
