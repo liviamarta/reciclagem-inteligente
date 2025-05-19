@@ -1,37 +1,25 @@
-* {
-  box-sizing: border-box;
-}
-
+/* Estilo base - permanece igual */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
   background-color: #eef2f3;
   color: #333;
-  line-height: 1.6;
 }
 
 header {
   background-color: #00695c;
   color: white;
-  padding: 20px;
+  padding: 20px 0;
   text-align: center;
-}
-
-nav {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 nav a {
+  margin: 0 15px;
   text-decoration: none;
   color: white;
-  font-weight: bold;
-  font-size: 1rem;
-  padding: 8px 12px;
+  font-weight: 600;
   transition: color 0.3s;
 }
 
@@ -40,38 +28,39 @@ nav a:hover {
 }
 
 main {
-  padding: 20px;
+  padding: 40px 20px;
   max-width: 1000px;
   margin: 0 auto;
+  text-align: center;
 }
 
 h2 {
-  font-size: 1.8rem;
+  font-size: 2rem;
   color: #00796b;
-  margin-bottom: 15px;
-  text-align: center;
+  margin-bottom: 10px;
 }
 
 .section {
   background: #ffffff;
   border-radius: 12px;
-  padding: 20px;
+  padding: 30px;
   margin-bottom: 30px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: left;
 }
 
 .section h2 {
   color: #2e7d32;
-  font-size: 1.5rem;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .section p, .section ul {
   font-size: 1rem;
+  line-height: 1.6;
 }
 
 .section ul {
-  list-style-type: disc;
+  list-style: disc;
   padding-left: 20px;
 }
 
@@ -81,11 +70,10 @@ form {
 }
 
 input, button {
-  padding: 12px;
+  padding: 10px;
   margin: 10px 0;
   width: 100%;
   border-radius: 5px;
-  border: 1px solid #ccc;
 }
 
 button {
@@ -93,19 +81,10 @@ button {
   color: white;
   border: none;
   cursor: pointer;
-  font-weight: bold;
 }
 
 button:hover {
   background-color: #004d40;
-}
-
-footer {
-  background-color: #00695c;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  margin-top: 40px;
 }
 
 .btn {
@@ -117,7 +96,6 @@ footer {
   text-decoration: none;
   border-radius: 8px;
   transition: background 0.3s;
-  text-align: center;
 }
 
 .btn:hover {
@@ -127,10 +105,11 @@ footer {
 .hero-img img {
   width: 100%;
   height: auto;
-  max-height: 500px;
+  max-height: 800px;
   object-fit: cover;
   border-radius: 12px;
-  margin: 20px 0;
+  margin-top: 23px;
+  margin-bottom: 30px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
@@ -138,7 +117,6 @@ footer {
   max-width: 900px;
   margin: 0 auto;
   text-align: left;
-  padding: 0 10px;
 }
 
 .back-button {
@@ -149,7 +127,6 @@ footer {
 .login-section {
   max-width: 500px;
   margin: auto;
-  padding: 0 10px;
 }
 
 .button-group button {
@@ -158,8 +135,14 @@ footer {
 
 .qrcode-container img {
   margin-top: 10px;
-  width: 100%;
-  max-width: 300px;
+}
+
+footer {
+  background-color: #00695c;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
 }
 
 .logo-container {
@@ -167,34 +150,54 @@ footer {
   align-items: center;
   justify-content: center;
   gap: 15px;
-  flex-wrap: wrap;
 }
 
 .logo-container img {
-  height: 40px;
+  height: 50px;
 }
 
 /* RESPONSIVIDADE */
 @media (max-width: 768px) {
-  h2 {
-    font-size: 1.5rem;
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  main {
+    padding: 20px 15px;
   }
 
   .section {
-    padding: 15px;
+    padding: 20px;
   }
 
-  nav a {
+  h2, .section h2 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .section p, .section ul {
     font-size: 0.95rem;
-    padding: 6px 10px;
+  }
+
+  .logo-container {
+    flex-direction: column;
+    gap: 10px;
   }
 
   .hero-img img {
-    max-height: 300px;
+    max-height: 400px;
   }
 
-  .logo-container img {
-    height: 30px;
+  footer {
+    padding: 15px;
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    width: 100%;
+    padding: 12px 0;
+    font-size: 1rem;
   }
 
   input, button {
@@ -203,27 +206,27 @@ footer {
 }
 
 @media (max-width: 480px) {
-  nav {
-    flex-direction: column;
+  header {
+    padding: 15px 0;
   }
 
-  nav a {
-    margin: 5px 0;
+  .section {
+    margin-bottom: 20px;
   }
 
-  h2 {
-    font-size: 1.3rem;
-  }
-
-  .section h2 {
-    font-size: 1.2rem;
-  }
-
-  .btn {
-    width: 100%;
+  .logo-container img {
+    height: 40px;
   }
 
   .hero-img img {
-    max-height: 250px;
+    max-height: 300px;
+  }
+
+  h2, .section h2 {
+    font-size: 1.3rem;
+  }
+
+  .btn {
+    font-size: 0.95rem;
   }
 }
