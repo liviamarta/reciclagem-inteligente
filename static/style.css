@@ -7,30 +7,73 @@ body {
   color: #333;
 }
 
-header {
+/* Navbar lateral fixa */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 220px;
+  height: 100vh;
   background-color: #00695c;
-  color: white;
-  padding: 20px 0;
-  text-align: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  padding-top: 80px; /* Espaço para o header */
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+  z-index: 1000;
 }
 
 nav a {
-  margin: 0 15px;
+  padding: 15px 20px;
   text-decoration: none;
   color: white;
   font-weight: 600;
-  transition: color 0.3s;
+  border-left: 4px solid transparent;
+  transition: background-color 0.3s, border-left-color 0.3s;
 }
 
 nav a:hover {
-  color: #a5d6a7;
+  background-color: #004d40;
+  border-left-color: #a5d6a7;
 }
 
+/* Header ajustado para ficar fixo e ao lado da navbar */
+header {
+  position: fixed;
+  top: 0;
+  left: 220px; /* deslocado para direita da navbar */
+  right: 0;
+  height: 80px;
+  background-color: #00695c;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  z-index: 1100;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo-container img {
+  height: 50px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+/* Main com margem à esquerda para não ficar embaixo da navbar */
 main {
-  padding: 40px 20px;
+  margin-left: 220px;
+  padding: 100px 20px 40px 20px; /* topo maior para header fixo */
   max-width: 1000px;
-  margin: 0 auto;
+  margin-right: auto;
+  margin-bottom: 40px;
   text-align: center;
 }
 
@@ -145,89 +188,82 @@ footer {
   margin-top: 40px;
 }
 
-.logo-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
-}
-
-.logo-container img {
-  height: 50px;
-}
-
 /* RESPONSIVIDADE */
-@media (max-width: 768px) {
-  nav a {
-    display: block;
-    margin: 10px 0;
+@media (max-width: 1024px) {
+  nav {
+    width: 180px;
+    padding-top: 70px;
   }
-
+  header {
+    left: 180px;
+    height: 70px;
+  }
   main {
-    padding: 20px 15px;
+    margin-left: 180px;
+    padding-top: 90px;
   }
-
-  .section {
-    padding: 20px;
+  .logo-container img {
+    height: 45px;
   }
+}
 
-  h2, .section h2 {
-    font-size: 1.5rem;
-    text-align: center;
-  }
-
-  .section p, .section ul {
-    font-size: 0.95rem;
-  }
-
-  .logo-container {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .hero-img img {
-    max-height: 400px;
-  }
-
-  footer {
-    padding: 15px;
-    font-size: 0.9rem;
-  }
-
-  .btn {
+@media (max-width: 768px) {
+  /* Navbar vira topo */
+  nav {
+    position: fixed;
+    top: 80px;
+    left: 0;
     width: 100%;
-    padding: 12px 0;
-    font-size: 1rem;
+    height: auto;
+    padding: 10px 0;
+    flex-direction: row;
+    justify-content: center;
   }
-
-  input, button {
-    font-size: 1rem;
+  nav a {
+    padding: 10px 15px;
+    border-left: none;
+    border-bottom: 2px solid transparent;
+  }
+  nav a:hover {
+    background-color: transparent;
+    border-bottom-color: #a5d6a7;
+  }
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    padding: 0 20px;
+  }
+  main {
+    margin-left: 0;
+    padding: 140px 20px 40px 20px;
+    max-width: 1000px;
   }
 }
 
 @media (max-width: 480px) {
   header {
-    padding: 15px 0;
+    padding: 15px 20px;
+    height: 70px;
   }
-
+  nav {
+    top: 70px;
+  }
   .section {
     margin-bottom: 20px;
   }
-
   .logo-container img {
     height: 40px;
   }
-
   .hero-img img {
     max-height: 300px;
   }
-
   h2, .section h2 {
     font-size: 1.3rem;
   }
-
   .btn {
     font-size: 0.95rem;
   }
 }
-
