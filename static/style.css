@@ -7,52 +7,6 @@ body {
   color: #333;
 }
 
-/* Sidebar fixa à esquerda */
-.sidebar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 60px; /* barra estreita minimalista */
-  background-color: #00695c;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 20px;
-  box-shadow: 2px 0 5px rgba(0,0,0,0.2);
-  z-index: 1000;
-}
-
-/* Itens da sidebar */
-.sidebar a {
-  color: white;
-  text-decoration: none;
-  margin: 20px 0;
-  font-size: 1.5rem; /* tamanho ícone */
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  transition: background-color 0.3s ease;
-  padding: 10px 0;
-  border-left: 4px solid transparent;
-}
-
-/* Hover nos itens da sidebar */
-.sidebar a:hover {
-  background-color: #004d40;
-  border-left: 4px solid #a5d6a7;
-  color: #a5d6a7;
-}
-
-/* Conteúdo principal empurrado para direita */
-main {
-  margin-left: 60px; /* igual à largura da sidebar */
-  padding: 40px 20px;
-  max-width: 1000px;
-  text-align: center;
-}
-
-/* Mantém seu estilo de header */
 header {
   background-color: #00695c;
   color: white;
@@ -61,8 +15,7 @@ header {
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-/* Ajusta nav dentro do header para não conflitar */
-header nav a {
+nav a {
   margin: 0 15px;
   text-decoration: none;
   color: white;
@@ -70,11 +23,16 @@ header nav a {
   transition: color 0.3s;
 }
 
-header nav a:hover {
+nav a:hover {
   color: #a5d6a7;
 }
 
-/* Restante do seu CSS continua igual... */
+main {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
 
 h2 {
   font-size: 2rem;
@@ -200,15 +158,13 @@ footer {
 
 /* RESPONSIVIDADE */
 @media (max-width: 768px) {
-  /* Nav links dentro do header ficam empilhados */
-  header nav a {
+  nav a {
     display: block;
     margin: 10px 0;
   }
 
   main {
     padding: 20px 15px;
-    margin-left: 0; /* remove deslocamento lateral na tela pequena */
   }
 
   .section {
@@ -247,24 +203,6 @@ footer {
   input, button {
     font-size: 1rem;
   }
-
-  /* Sidebar vira barra horizontal no topo */
-  .sidebar {
-    position: relative;
-    height: auto;
-    width: 100%;
-    flex-direction: row;
-    justify-content: space-around;
-    padding: 10px 0;
-    box-shadow: none;
-  }
-
-  .sidebar a {
-    margin: 0;
-    font-size: 1.2rem;
-    border-left: none;
-    padding: 10px 15px;
-  }
 }
 
 @media (max-width: 480px) {
@@ -292,3 +230,4 @@ footer {
     font-size: 0.95rem;
   }
 }
+
