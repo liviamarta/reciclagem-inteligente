@@ -135,8 +135,22 @@ button:hover {
 
 .qrcode-container img {
   margin-top: 10px;
-  width: 250px;  /* ou outro tamanho que preferir */
+  width: 250px; /* tamanho padrão para desktop */
   height: auto;
+}
+
+/* Para telas com largura até 480px (celulares) */
+@media (max-width: 480px) {
+  .qrcode-container img {
+    width: 150px; /* tamanho menor para celulares */
+  }
+}
+
+/* Para tablets ou telas entre 481px e 768px, opcional */
+@media (min-width: 481px) and (max-width: 768px) {
+  .qrcode-container img {
+    width: 200px;
+  }
 }
 
 footer {
