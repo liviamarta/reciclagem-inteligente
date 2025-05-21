@@ -142,7 +142,7 @@ button:hover {
 /* Para telas com largura até 480px (celulares) */
 @media (max-width: 480px) {
   .qrcode-container img {
-    width: 150px; /* tamanho menor para celulares */
+    width: 350px; /* tamanho menor para celulares */
   }
 }
 
