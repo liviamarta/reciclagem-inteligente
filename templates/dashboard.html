@@ -22,14 +22,12 @@
   <main>
     <h2>Bem-vindo(a), {{ matricula }}!</h2>
     <p>Você tem atualmente <strong>{{ pontos }}</strong> pontos!</p>
-    <p>Escolha a lixeira para descarte:</p>
-    <button onclick="mostrarQRCode()">Lixeira Plástico</button>
-    <button onclick="mostrarQRCode()">Lixeira Papel</button>
-    <button onclick="mostrarQRCode()">Lixeira Metais</button>
+    <p>Clique no botão abaixo para gerar o QR Code de descarte:</p>
+    <button onclick="mostrarQRCode()">Mostrar QR Code</button>
 
     <div id="qrcode" style="margin-top: 20px; display: none;">
       <p>Escaneie este QR Code para abrir a lixeira:</p>
-      <img src="https://api.qrserver.com/v1/create-qr-code/?data=Descarte&size=150x150" alt="QR Code">
+      <img src="{{ url_for('static', filename='img/qr_lixeira.png') }}" alt="QR Code da Lixeira" width="150" height="150">
     </div>
   </main>
 
@@ -38,9 +36,7 @@
   </footer>
 
   <script>
-    function mostrarQRCode() {
-      document.getElementById('qrcode').style.display = 'block';
-    }
-  </script>
-</body>
-</html>
+  function mostrarQRCode() {
+    document.getElementById('qrcode').style.display = 'block';
+  }
+</script>
