@@ -5,6 +5,7 @@ body {
   padding: 0;
   background-color: #eef2f3;
   color: #333;
+  font-size: 16px; /* Tamanho base padrão */
 }
 
 header {
@@ -21,6 +22,7 @@ nav a {
   color: white;
   font-weight: 600;
   transition: color 0.3s;
+  font-size: 1rem;
 }
 
 nav a:hover {
@@ -74,6 +76,7 @@ input, button {
   margin: 10px 0;
   width: 100%;
   border-radius: 5px;
+  font-size: 1rem;
 }
 
 button {
@@ -96,6 +99,7 @@ button:hover {
   text-decoration: none;
   border-radius: 8px;
   transition: background 0.3s;
+  font-size: 1rem;
 }
 
 .btn:hover {
@@ -165,6 +169,7 @@ footer {
   nav a {
     display: block;
     margin: 10px 0;
+    font-size: 0.95rem;
   }
 
   main {
@@ -215,12 +220,17 @@ footer {
 
 /* Celulares */
 @media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
   header {
     padding: 15px 0;
   }
 
   nav a {
     margin: 8px 0;
+    font-size: 0.9rem;
   }
 
   .section {
@@ -237,21 +247,29 @@ footer {
   }
 
   h2, .section h2 {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+  }
+
+  .section p, .section ul {
+    font-size: 0.9rem;
   }
 
   .btn {
     width: 100%;
-    padding: 12px 0;
-    font-size: 0.95rem;
+    padding: 10px 0;
+    font-size: 0.9rem;
+  }
+
+  input, button {
+    font-size: 0.9rem;
   }
 
   .qrcode-container img {
-    width: 100%; /* ✅ Corrigido para celular */
+    width: 100%;
   }
 
   footer {
     padding: 12px;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
   }
 }
