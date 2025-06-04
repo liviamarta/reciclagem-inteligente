@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Área do Estudante</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
   <header>
@@ -26,7 +27,7 @@
 
     <div id="qrcode" style="margin-top: 20px; display: none;">
       <p>Escaneie este QR Code para abrir a lixeira:</p>
-      <img src="{{ url_for('static', filename='img/qr_lixeira.png') }}" alt="QR Code da Lixeira" width="800" height="800">
+      <img src="{{ url_for('static', filename='img/qr_lixeira.png') }}" alt="LIXEIRA DE PLÁSTICO" width="800" height="800">
     </div>
   </main>
 

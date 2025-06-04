@@ -1,4 +1,4 @@
-/* Estilo base - permanece igual */
+/* Estilo base */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
@@ -135,22 +135,8 @@ button:hover {
 
 .qrcode-container img {
   margin-top: 10px;
-  width: 250px; /* tamanho padrão para desktop */
+  width: 250px; /* padrão para desktop */
   height: auto;
-}
-
-/* Para telas com largura até 480px (celulares) */
-@media (max-width: 480px) {
-  .qrcode-container img {
-    width: 1000px; /* tamanho menor para celulares */
-  }
-}
-
-/* Para tablets ou telas entre 481px e 768px, opcional */
-@media (min-width: 481px) and (max-width: 768px) {
-  .qrcode-container img {
-    width: 200px;
-  }
 }
 
 footer {
@@ -173,6 +159,8 @@ footer {
 }
 
 /* RESPONSIVIDADE */
+
+/* Tablets e telas médias */
 @media (max-width: 768px) {
   nav a {
     display: block;
@@ -219,14 +207,24 @@ footer {
   input, button {
     font-size: 1rem;
   }
+
+  .qrcode-container img {
+    width: 200px;
+  }
 }
 
+/* Celulares */
 @media (max-width: 480px) {
   header {
     padding: 15px 0;
   }
 
+  nav a {
+    margin: 8px 0;
+  }
+
   .section {
+    padding: 15px;
     margin-bottom: 20px;
   }
 
@@ -243,7 +241,17 @@ footer {
   }
 
   .btn {
+    width: 100%;
+    padding: 12px 0;
     font-size: 0.95rem;
   }
-}
 
+  .qrcode-container img {
+    width: 100%; /* ✅ Corrigido para celular */
+  }
+
+  footer {
+    padding: 12px;
+    font-size: 0.85rem;
+  }
+}
