@@ -273,3 +273,114 @@ footer {
     font-size: 0.8rem;
   }
 }
+
+/* ----------- Estilo tabela ranking ----------- */
+section h2 {
+  margin-bottom: 25px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 10px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  font-size: 1rem;
+}
+
+thead tr {
+  background-color: #00796b;
+  color: white;
+  text-align: left;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  user-select: none;
+}
+
+thead th {
+  padding: 12px 15px;
+}
+
+tbody tr {
+  background: #e0f2f1; /* verde clarinho */
+  transition: background-color 0.3s ease;
+  cursor: default;
+}
+
+tbody tr:hover {
+  background: #a5d6a7;
+}
+
+tbody td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #b2dfdb;
+  vertical-align: middle;
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Alinha coluna posição centralizada e com peso */
+tbody td:first-child {
+  text-align: center;
+  font-weight: 700;
+  width: 60px;
+  color: #004d40;
+}
+
+/* Matrícula com fonte monoespaçada para uniformizar */
+tbody td:nth-child(2) {
+  font-family: 'Courier New', Courier, monospace;
+  color: #00695c;
+  font-weight: 600;
+}
+
+/* Pontos em negrito */
+tbody td:last-child {
+  font-weight: 700;
+  color: #2e7d32;
+  text-align: center;
+}
+
+/* Responsividade para tabela */
+@media (max-width: 600px) {
+  table, thead, tbody, tr, th, td {
+    display: block;
+  }
+
+  thead tr {
+    display: none;
+  }
+
+  tbody tr {
+    margin-bottom: 15px;
+    background: #e0f2f1;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  }
+
+  tbody td {
+    padding: 8px 12px;
+    border: none;
+    position: relative;
+    text-align: left;
+    font-size: 0.9rem;
+  }
+
+  tbody td:first-child {
+    text-align: left;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+
+  /* Labels antes do conteúdo para simular cabeçalho */
+  tbody td:nth-child(1)::before { content: "Posição: "; font-weight: 700; color: #004d40; }
+  tbody td:nth-child(2)::before { content: "Matrícula: "; font-weight: 600; color: #00695c; }
+  tbody td:nth-child(3)::before { content: "Pontos: "; font-weight: 700; color: #2e7d32; }
+}
