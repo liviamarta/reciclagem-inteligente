@@ -53,6 +53,18 @@ def dashboard():
 
     return render_template('dashboard.html', matricula=matricula, pontos=pontos, qr_code_data=qr_code_data)
 
+@app.route('/validar_qrcode')
+def validar_qrcode():
+    matricula = request.args.get('matricula')
+
+    if matricula and matricula in fake_db:
+        # Se a matrícula for válida, adiciona 10 pontos
+        fake_db[matricula] += 10
+        return redirect(url_for('dashboard'))  # Redireciona de volta para o dashboard
+
+    # Se a matrícula não for válida, redireciona para a tela de login
+    return redirect(url_for('login'))
+
 @app.route('/ranking')
 def ranking():
     # Ordena os alunos pelo número de pontos (decrescente)
